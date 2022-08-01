@@ -17,6 +17,7 @@
     "url": "git@github.com:open-mmlab/labelbee.git"
   },
   "scripts": {
+    "start":"npm run start",
     "test": "echo \"Error: run tests from root\" && exit 1",
     "dev": "rollup -c rollup.config.js -w ",
     "build": "rollup -c rollup.config.js && npm run build:type",

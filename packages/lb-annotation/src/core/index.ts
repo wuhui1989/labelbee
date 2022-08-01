@@ -121,6 +121,7 @@ export default class AnnotationEngine {
    * @returns
    */
   private _initToolOperation() {
+    // debugger;
     if (this.toolInstance) {
       this.toolInstance.destroy();
     }
@@ -144,7 +145,6 @@ export default class AnnotationEngine {
     if (this.imgNode) {
       Object.assign(defaultData, { imgNode: this.imgNode });
     }
-
     this.toolInstance = new ToolOperation(defaultData);
 
     // 实时同步语言

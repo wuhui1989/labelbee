@@ -39,6 +39,7 @@ const AnnotationOperation: React.FC<IProps> = (props: IProps) => {
   // const canvasSize = getFormatSize(windowSize);
   const size = useSize(annotationRef);
 
+  // debugger;
   useEffect(() => {
     store.dispatch(InitToolStyleConfig());
   }, []);
@@ -47,7 +48,6 @@ const AnnotationOperation: React.FC<IProps> = (props: IProps) => {
     if (!annotationEngine) {
       return;
     }
-
     // 更改 toolInstance 内部国际化语言
     switch (i18n.language) {
       case 'cn':
@@ -59,6 +59,9 @@ const AnnotationOperation: React.FC<IProps> = (props: IProps) => {
         break;
       }
     }
+    // debugger;
+    // annotationEngine?.forbidOperation()
+    // toolInstance?.setForbidOperation(true)
     annotationEngine?.setDataInjectionAtCreation(dataInjectionAtCreation);
     annotationEngine?.setRenderEnhance(renderEnhance);
   }, [annotationEngine, dataInjectionAtCreation, renderEnhance]);
@@ -76,6 +79,8 @@ const AnnotationOperation: React.FC<IProps> = (props: IProps) => {
       toolInstance.singleOn('changeAnnotationShow', () => {
         forceRender((s) => s + 1);
       });
+
+      // toolInstance.setForbidOperation(true)
     }
   }, [toolInstance]);
 

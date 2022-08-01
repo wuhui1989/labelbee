@@ -10,10 +10,18 @@ import { DEFAULT_ANNOTATIONS } from './mock';
 import StepUtils from '@labelbee/lb-components/dist/utils/StepUtils';
 
 const App = () => {
-  const tool = qs.parse(window.location.search, { ignoreQueryPrefix: true, comma: true }).tool;
-
+//   - `rectTool`
+// - `tagTool` 
+// - `polygonTool`
+// - `pointTool`
+// - `textTool`
+// - `lineTool`
+// videoTagTool
+  // const tool = qs.parse(window.location.search, { ignoreQueryPrefix: true, comma: true }).tool;
+  const tool = 'videoTagTool'
   const isSingleTool = !Array.isArray(tool);
   const stepList = isSingleTool ? getStepList(tool) : getDependStepList(tool);
+  // debugger;
   const currentIsVideo = StepUtils.currentToolIsVideo(1, stepList);
 
   const [fileList] = useState(
@@ -24,6 +32,9 @@ const App = () => {
     })),
   );
 
+
+
+  debugger;
   // 参看工具的展示
   if (tool === 'annotationView') {
     return (

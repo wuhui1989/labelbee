@@ -42,7 +42,7 @@ class TextToolOperation extends BasicToolOperation {
     this.textList = textResultList;
     this.toggleTextContainerVisible(true);
     const values = this.textList[0]?.value;
-
+    debugger;
     if (values) {
       Object.keys(values).forEach((k) => {
         this.renderText(k, values[k]);

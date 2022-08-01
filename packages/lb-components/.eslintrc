@@ -32,6 +32,7 @@
     "rules": {
         // 自定义您的规则
         // Customize your rules
+        "no-debugger":"off",
         "complexity": ["off"],
         "max-params": "off"
     }

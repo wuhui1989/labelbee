@@ -42,6 +42,8 @@ const OutputApp = (props: AppProps, ref: any) => {
   );
 };
 
+export type { AppProps } from '@/App'
+
 export default React.forwardRef(OutputApp);
 
 export { AnnotationView, i18n, VideoTagTool };

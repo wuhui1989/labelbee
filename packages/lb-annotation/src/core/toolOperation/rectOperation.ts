@@ -849,7 +849,7 @@ class RectOperation extends BasicToolOperation {
     if (!this.imgInfo) {
       return;
     }
-
+    // debugger;
     const coordinateZoom = this.getCoordinateUnderZoom(e);
     const coordinate = AxisUtils.changeDrawOutsideTarget(
       coordinateZoom,
@@ -992,7 +992,7 @@ class RectOperation extends BasicToolOperation {
     if (!this.drawingRect) {
       return;
     }
-
+    debugger;
     if (this.config.textConfigurable) {
       this.setSelectedRectID(this.drawingRect.id);
     } else {
@@ -1423,6 +1423,7 @@ class RectOperation extends BasicToolOperation {
 
       ctx.font = 'lighter 14px Arial';
       let showText = '';
+      // debugger;
       if (this.config?.isShowOrder && rect.order && rect?.order > 0) {
         showText = `${rect.order}`;
       }

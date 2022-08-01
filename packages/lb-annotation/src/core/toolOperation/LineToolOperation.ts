@@ -734,6 +734,7 @@ class LineToolOperation extends BasicToolOperation {
    * @param offsetY
    */
   public moveActiveArea(offsetX: number, offsetY: number) {
+    debugger;
     if (this.activeArea) {
       this.activeArea = Object.assign(this.activeArea, {
         top: this.activeArea.top + offsetY,
@@ -981,7 +982,6 @@ class LineToolOperation extends BasicToolOperation {
         this.coordUtils.getRenderCoord(lastPoint),
       );
     }
-
     /** 获取边缘吸附点 */
     if (this.edgeAdsorptionEnabled && !disabledAdsorb) {
       return this.getAdsorptionPoint(coord);
@@ -1390,6 +1390,7 @@ class LineToolOperation extends BasicToolOperation {
   public onDblclick = () => {};
 
   public isTextValid(text: string) {
+    debugger;
     return AttributeUtils.textAttributeValidate(this.textCheckType, this.customFormat, text);
   }
 
@@ -1934,7 +1935,11 @@ class LineToolOperation extends BasicToolOperation {
   public updateSelectedTextAttribute(newTextAttribute?: string) {
     if (this._textAttributeInstance && newTextAttribute && this.selectedID) {
       let textAttribute = newTextAttribute;
-      const textAttributeInvalid = !AttributeUtils.textAttributeValidate(this.config.textCheckType, '', textAttribute);
+      const textAttributeInvalid = !AttributeUtils.textAttributeValidate(
+        this.config.textCheckType,
+        this.customFormat,
+        textAttribute,
+      );
       if (textAttributeInvalid) {
         this.emit('messageError', AttributeUtils.getErrorNotice(this.config.textCheckType, this.lang));
         textAttribute = '';

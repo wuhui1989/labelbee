@@ -180,7 +180,6 @@ export function InitTaskData({
   stepList,
 }: any): any {
   const tasks: any[] = [];
-
   if (onSubmit) {
     tasks.push(UpdateOnSubmit(onSubmit));
   }
@@ -216,7 +215,6 @@ export function InitTaskData({
   tasks.push({
     type: ANNOTATION_ACTIONS.INIT_TOOL,
   });
-
   return (dispatch: any) => dispatchTasks(dispatch, tasks);
 }
 

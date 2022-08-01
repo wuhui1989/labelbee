@@ -189,6 +189,7 @@ export default class AttributeUtils {
 
   public static textAttributeValidate(textCheckType: number, customFormat: string, text: string) {
     try {
+      debugger;
       const reg = new RegExp(this.checkString(textCheckType, customFormat));
       return reg.test(text);
     } catch (error) {

@@ -7,10 +7,10 @@ import img4 from './images/66.jpg';
 // export const fileList = ['10', '19', '20', '66'].map((i) => `${MOCK_URL}${i}.jpg`);
 export const fileList = [img1, img2, img3, img4];
 export const videoList = [
-  'http://127.0.0.1:8080/a.mp4',
-  'http://127.0.0.1:8080/d.mp4',
-  'http://127.0.0.1:8080/c.mp4',
-  'http://127.0.0.1:8080/e.mp4',
+  'https://shlab-data.oss-cn-shanghai.aliyuncs.com/test4/obj/f25653a6-a539-4523-ae96-7f79605f26eb.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=LTAI5tMmp1jihdZ4sDsZPuAT%2F20220801%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220801T085222Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=28927fe14b2ffc19ef626b1f9e7609176e3044677b0979f27cf714e91c3e0feb',
+  'https://shlab-data.oss-cn-shanghai.aliyuncs.com/test4/obj/f25653a6-a539-4523-ae96-7f79605f26eb.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=LTAI5tMmp1jihdZ4sDsZPuAT%2F20220801%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220801T085222Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=28927fe14b2ffc19ef626b1f9e7609176e3044677b0979f27cf714e91c3e0feb',
+  'https://shlab-data.oss-cn-shanghai.aliyuncs.com/test4/obj/f25653a6-a539-4523-ae96-7f79605f26eb.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=LTAI5tMmp1jihdZ4sDsZPuAT%2F20220801%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220801T085222Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=28927fe14b2ffc19ef626b1f9e7609176e3044677b0979f27cf714e91c3e0feb',
+  'https://shlab-data.oss-cn-shanghai.aliyuncs.com/test4/obj/f25653a6-a539-4523-ae96-7f79605f26eb.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=LTAI5tMmp1jihdZ4sDsZPuAT%2F20220801%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220801T085222Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=28927fe14b2ffc19ef626b1f9e7609176e3044677b0979f27cf714e91c3e0feb',
 ];
 
 const data = Array(100)

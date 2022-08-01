@@ -116,7 +116,8 @@ const ToolHeader: React.FC<IToolHeaderProps> = ({
   const ref = useRef(null);
 
   const size = useSize(ref);
-
+  const width = size?.width ?? window.innerWidth;
+  // debugger;
   // render 数据展示
   const currentOption = <ExportData exportData={exportData} />;
 
@@ -136,7 +137,7 @@ const ToolHeader: React.FC<IToolHeaderProps> = ({
 
   const curLang = i18n.language;
 
-  const width = size?.width ?? window.innerWidth;
+
 
   const backNode = <LeftOutlined className={`${prefix}-header__icon`} onClick={closeAnnotation} />;
 

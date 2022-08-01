@@ -294,7 +294,6 @@ export const annotationReducer = (
 
       if (dataSourceStep && tool) {
         stepBasicResultList = fileResult[`step_${dataSourceStep}`]?.result;
-
         if (stepBasicResultList?.length > 0) {
           annotationEngine?.setBasicInfo(
             dependStepConfig.tool,
@@ -372,8 +371,7 @@ export const annotationReducer = (
         stepBasicResultList,
         isInitData,
       );
-
-      annotationEngine?.launchOperation();
+      // annotationEngine?.launchOperation();
 
       if (hasDataSourceStep) {
         if (stepBasicResultList?.length > 0) {
@@ -426,7 +424,6 @@ export const annotationReducer = (
     case ANNOTATION_ACTIONS.INIT_TOOL: {
       const { imgNode } = state;
       const instance = updateToolInstance(state, imgNode);
-
       if (instance) {
         const { toolInstance, annotationEngine } = instance;
         return {

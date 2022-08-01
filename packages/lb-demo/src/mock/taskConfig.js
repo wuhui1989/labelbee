@@ -2,31 +2,31 @@ import { cTool } from '@labelbee/lb-annotation';
 const { EVideoToolName, EToolName } = cTool;
 
 const rectToolConfig = {
-  showConfirm: false,
-  skipWhileNoDependencies: false,
-  drawOutsideTarget: false,
-  copyBackwardResult: true,
-  minWidth: 1,
-  minHeight: 1,
-  isShowOrder: true,
+  showConfirm: false, // 无效配置
+  skipWhileNoDependencies: false, // 无效配置
+  drawOutsideTarget: false, //框是否可以画至图片以外
+  copyBackwardResult: true, // 无效配置
+  minWidth: 1, // 拉框最小宽度
+  minHeight: 1, // 拉框最小高度
+  isShowOrder: true, //是否显示拉框序号
   filterData: ['valid', 'invalid'],
-  attributeConfigurable: true,
+  attributeConfigurable: true, //是否显示拉框标签配置选项
   attributeList: [
-    { key: '玩偶', value: 'doll' },
+    { key: '玩偶1', value: 'doll' },
     { key: '喷壶', value: 'wateringCan' },
     { key: '脸盆', value: 'washbasin' },
     { key: '保温杯', value: 'vacuumCup' },
     { key: '纸巾', value: 'tissue' },
     { key: '水壶', value: 'kettle' },
-  ],
-  textConfigurable: true,
-  textCheckType: 0,
-  customFormat: '',
+  ], //拉框标签配置选项
+  textConfigurable: true, //拉框标签是否可配置
+  textCheckType: 4, //拉框标签检查输入类型配置 1 为数字 2 为英文 3为数字 4 为任意字符
+  customFormat: '', // 无效配置
 };
 
 const tagToolConfig = {
-  showConfirm: true,
-  skipWhileNoDependencies: false,
+  showConfirm: true, //无效配置
+  skipWhileNoDependencies: false, // 无效配置
   inputList: [
     {
       key: '类别1',
@@ -67,17 +67,17 @@ const tagToolConfig = {
         { key: '选项2-3', value: 'option2-3', isDefault: false },
       ],
     },
-  ],
+  ], // 标签配置
 };
 
 const lineToolConfig = {
-  lineType: 0,
-  lineColor: 0,
-  edgeAdsorption: true,
+  lineType: 0, // 配置拉线类型 0 为普通拉线，2为贝塞尔曲线
+  lineColor: 1, // 配置拉线颜色，0为单一色，1 为多色（暂未生效）
+  edgeAdsorption: true, //多线条情况下是否支持 点吸附
   outOfTarget: true,
-  copyBackwardResult: true,
-  isShowOrder: true,
-  attributeConfigurable: true,
+  copyBackwardResult: true, //无效配置
+  isShowOrder: true, //是否显示划线序号
+  attributeConfigurable: true, //是否显示划线标签配置选项
   attributeList: [
     { key: '类别1', value: '类别1' },
     { key: '类别ao', value: 'class-ao' },
@@ -88,22 +88,22 @@ const lineToolConfig = {
     { key: '类别u7', value: 'class-u7' },
     { key: '类别Zb', value: 'class-Zb' },
     { key: '类别zi', value: 'class-zi' },
-  ],
-  textConfigurable: true,
-  textCheckType: 2,
-  customFormat: '',
-  showConfirm: true,
-  lowerLimitPointNum: 2,
-  upperLimitPointNum: '',
-  preReferenceStep: 0,
-  skipWhileNoDependencies: false,
-  filterData: ['valid', 'invalid'],
+  ], //划线标签配置选项
+  textConfigurable: true, //划线标签是否可配置
+  textCheckType: 4,//划线标签检查输入类型配置 1 为数字 2 为英文 3为数字 4 为任意字符(配合customFormat 使用)
+  customFormat: '^[\\s\\S]{1,3}$', //划线标签检查输入格式正则
+  showConfirm: true,  //无效配置
+  lowerLimitPointNum: 4, // 最少定点数
+  upperLimitPointNum: '', // 最多顶点数
+  preReferenceStep: 0,  // 无效配置
+  skipWhileNoDependencies: false, // 无效配置
+  filterData: ['valid', 'invalid'], // 无效配置
 };
 
 const textToolConfig = {
-  showConfirm: false,
+  showConfirm: true,
   skipWhileNoDependencies: false,
-  enableTextRecognition: false,
+  enableTextRecognition: true,
   recognitionMode: 'general',
   configList: [
     { label: '文本', key: 'text', required: false, default: 'default1', maxLength: 1000 },
@@ -114,24 +114,24 @@ const textToolConfig = {
 };
 
 const polygonConfig = {
-  lineType: 0,
-  lineColor: 0,
-  edgeAdsorption: true,
-  drawOutsideTarget: false,
-  copyBackwardResult: false,
-  isShowOrder: false,
-  attributeConfigurable: true,
-  attributeList: [
+  lineType: 0, // 配置拉线类型 0 为普通拉线，2为贝塞尔曲线
+  lineColor: 0, // 配置拉线颜色，0为单一色，1 为多色（暂未生效）
+  edgeAdsorption: true, //多线条情况下是否支持 点吸附
+  drawOutsideTarget: false, // 无效配置
+  copyBackwardResult: false, //无效配置
+  isShowOrder: true, //是否显示分割序号
+  attributeConfigurable: true, //是否显示分割标签配置选项
+  attributeList: [ 
     { key: '玩偶', value: 'doll' },
     { key: '喷壶', value: 'wateringCan' },
     { key: '脸盆', value: 'washbasin' },
     { key: '保温杯', value: 'vacuumCup' },
     { key: '纸巾', value: 'tissue' },
     { key: '水壶', value: 'kettle' },
-  ],
-  textConfigurable: true,
-  textCheckType: 0,
-  customFormat: '',
+  ], //分割标签配置选项
+  textConfigurable: true, //分割标签是否可配置
+  textCheckType: 0, //分割标签检查输入类型配置 1 为数字 2 为英文 3为数字 4 为任意字符(配合customFormat 使用)
+  customFormat: '', ///分割标签检查输入格式正则
 };
 
 export const getConfig = (tool) => {

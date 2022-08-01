@@ -56,6 +56,7 @@ module.exports = {
     'unicorn/expiring-todo-comments': 2,
     'unicorn/no-abusive-eslint-disable': 2,
 
+    'no-debugger': 0,
     // https://github.com/typescript-eslint/typescript-eslint/issues/2540#issuecomment-692866111
     'no-use-before-define': 0,
     '@typescript-eslint/no-use-before-define': 2,
